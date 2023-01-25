@@ -1,5 +1,5 @@
 function getIP{
-    (get-netipaddress).ipv4address | Select-String "10.*"
+    (get-netipaddress).ipv4address | Select-String "192.168.128*"
 }
 
 
