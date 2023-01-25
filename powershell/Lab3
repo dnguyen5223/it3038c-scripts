@@ -1,0 +1,19 @@
+function getIP{
+    (get-netipaddress).ipv4address | Select-String "10.*"
+}
+
+
+$IP =getIP
+
+$USER =(whoami)
+
+$PS =$HOST.Version.Major
+
+$NAME =$HOST.Name
+
+$DATE =(Date)
+
+
+Write-Host("This machine's IP is $IP, User is $USER, Hostname is $NAME . Powershell version is $PS. TOday's Date is $DATE.")
+
+$BODY = ("This machine's IP is $IP, User is $USER, Hostname is $NAME . Powershell version is $PS. TOday's Date is $DATE.")
